@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the maze and timer vertically */
+  font-family: 'Arial', sans-serif;
+  background-color: #2a9178; /* Default theme background */
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+#maze-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(20, 20px); /* Original size */
+  grid-template-rows: repeat(20, 20px); /* Original size */
+  gap: 0;
+  position: relative;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+}
+
+.floor {
+  background-color: #51c2a7; /* Default theme floor */
+}
+
+.wall {
+  background-color: #443d8a; /* Default theme wall */
+}
+
+.end {
+  background-color: #ff0000; /* Red for end */
+  width: 15px; /* Make the end goal smaller */
+  height: 15px; /* Make the end goal smaller */
+  margin: auto; /* Center the end goal within the cell */
+}
+
+.player {
+  background-color: #ff0000;
+  width: 100%;
+  height: 100%;
+}
+
+#timer {
+  color: #8680bd; /* Default theme text */
+  font-size: 36px; /* Bigger font size */
+  font-family: 'Helvetica Neue', sans-serif; /* Minimalistic font */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#countdown-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8680bd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #443d8a;
+  z-index: 1;
+  text-align: center;
+}
+
+#times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #8680bd; /* Default theme text */
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
+
+#themeSelect {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
